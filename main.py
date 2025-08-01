@@ -1,8 +1,6 @@
 import sqlite3
 # # Data types: NULL  INTEGER  REAL  TEXT  BLOB
 
-
-
 # conn = sqlite3.connect('customer.db')
 #
 # c = conn.cursor()
@@ -13,7 +11,17 @@ import sqlite3
 #     last_name TEXT,
 #     email TEXT
 #     )""")
+# OR you can also create like:
+# sql = '''create table if not exists cars(
+#         ID integer primary key autoincrement,
+#         manufacturer text,
+#         model text,
+#         number_of_doors integer
+#     )'''
 
+
+# # Insert record
+# sql ="insert into cars(manufacturer, model, number_of_doors) values('Kia', 'Serrento', 4)"
 # c.execute("INSERT INTO customers VALUES ('Qasim', 'Bilal', 'qasim@gmail.com')")          # insert one record into table
 #
 # many_customers = [                                                                   # insert many records into table
@@ -58,6 +66,7 @@ import sqlite3
 # c.execute("""UPDATE customers SET first_name = 'Ali'
 #             WHERE rowid = 1
 # """)
+# connection.execute("Update cars set number_of_doors = 2 where ID = 3")
 
 # Delete record
 # c.execute("DELETE FROM customers WHERE rowid = 18")
