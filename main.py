@@ -97,3 +97,9 @@ import sqlite3
 
 
 
+# To rename column in DB browser
+# alter table cars rename column company to manufacturer
+
+# To see maximum salary and 2nd last maximum salary
+# select name, salary from Employee where salary = (select min(salary) from Employee)
+# select name, salary from Employee order by salary desc limit 3,1
